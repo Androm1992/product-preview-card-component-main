@@ -1,0 +1,155 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* VAR */
+
+:root {
+
+    --clr-primary-400-cyan: hsl(158, 36%, 37%);
+    --clr-primary-200-cream: hsl(30, 38%, 92%);
+    --clr-neutral-700-darkblue: hsl(212, 21%, 14%);
+    --clr-neutral-500-blueish: hsl(228, 12%, 48%);
+
+    --fontweight-normal: 500;
+    --fontweight-bold: 700;
+
+    --fontfamily-accent: "Montserrat", sans-serif;
+    --fontfamily-basic: "Fraunces", serif;
+}
+
+
+/* --STYLING-- */
+
+body {
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    font-family: var(--fontfamily-basic);
+    font-size: var(--fontweight-normal);
+    background: var(--clr-primary-200-cream);
+    color: var(--clr-neutral-500-blueish);
+
+}
+
+.container {
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 12px;
+    /* border:1px solid black;  */
+    overflow: hidden;
+}
+
+.product {
+    padding: 2rem;
+    background: white;
+}
+
+.product * {
+    margin: 12px 0;
+}
+
+.product>.btn,
+p {
+    font-family: var(--fontfamily-accent);
+
+}
+
+.title_ish {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product_name {
+    font-weight: var(--fontweight-bold);
+    color: var(--clr-neutral-700-darkblue);
+    line-height: 2rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.price .new {
+    color: var(--clr-primary-400-cyan);
+    font-size: 2rem;
+    font-weight: var(--fontweight-bold);
+    font-family: var(--fontfamily-basic);
+}
+
+.btn {
+    width: 100%;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--clr-primary-400-cyan);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn:hover {
+    background-color: hsl(158, 36%, 25%);
+    cursor: pointer;
+}
+
+.shop_icon {
+    width: 15px;
+    height: 16px;
+    background-image: url('images/icon-cart.svg');
+
+}
+
+@media screen and (max-width:700px) {
+    body{
+        display: block;
+    }
+    .container{
+        display:block;
+    }
+}
